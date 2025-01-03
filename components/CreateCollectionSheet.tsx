@@ -79,8 +79,10 @@ function CreateCollectionSheet({ open, onOpenChange }: Props) {
                 <FormLabel>Color</FormLabel>
                 <FormControl>
                   <Select>
-                    <SelectTrigger className="w-full h-8 " >
-                      <SelectValue placeholder="color" className="w-full h-8" />
+                    <SelectTrigger
+                      className={cn("w-full h-8 text-white", field.value)}
+                    >
+                      <SelectValue placeholder="Color" className="w-full h-8" />
                     </SelectTrigger>
                     <SelectContent className="w-full">
                       {Object.keys(CollectionColors).map((color) => (
